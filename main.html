@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header>
+        <div class="grid">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="#">Timetables</a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" style="outline: none;" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Dropdown
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <li><a class="dropdown-item" href="#">Action</a></li>
+                          <li><a class="dropdown-item" href="#">Another action</a></li>
+                          <li><hr class="dropdown-divider"></li>
+                          <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                      </li>
+                    </ul>
+                    <form class="d-flex">
+                      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                      <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                  </div>
+                </div>
+              </nav>
+        </div>
+    </header>
+    <body class="grid">
+        <div class="container">
+            <div class="main-header">
+                <div class="time">
+                    <p class="time-now">Thời gian hiện tại:</p>
+                </div>
+                <div class="clock">2020/12/12</div>
+            </div>
+            <ul class="list-work">                
+                <li class="work1">No</li>
+                <li class="work2">Thời Gian</li>
+                <li class="work3">Nội Dung Công Việc</li>
+                <li class="work4">Chú Thích</li>
+                <li class="work5">Hoàn Thành</li>
+                </ul>
+            </ul>
+            <div class="main-body">
+                <div>
+                    <ul class="body-left">
+                        <li class='thuNoiChung active day1'>Thứ Hai</li>
+                        <li class='thuNoiChung day2'>Thứ Ba</li>
+                        <li class='thuNoiChung day3'>Thứ Tư</li>
+                        <li class='thuNoiChung day4'>Thứ 5</li>
+                        <li class='thuNoiChung day5'>Thứ 6</li>
+                        <li class='thuNoiChung day6'>Thứ 7</li>
+                        <li class='thuNoiChung day7'>Chủ Nhật</li>
+                    </ul>
+                </div>
+                <div class="board--parent">
+                    <div id="board--parent1" class="board-body active">
+                        <div class="row1 board-1 border-bottom">
+                            <div class="column1"></div>
+                            <div class="column2">
+                                <input class="time-work1" type="time">
+                                <i class="far fa-check-circle"></i>
+                            </div>
+                            <div class="column3" contenteditable="true" data-placeholder="Công việc của bạn..."></div>
+                            <div class="column4" contenteditable="true" data-placeholder="Chú thích"></div>
+                            <div class="column5">
+                                <button class="btn-confirm1">Confirm</button>
+                            </div>
+                        </div>
+                        <div class="row1 board-1 border-bottom">
+                            <div class="column1"></div>
+                            <div class="column2">
+                                    <input class="time-work1" type="time">
+                                    <i class="far fa-check-circle"></i>
+                            </div>
+                            <div class="column3" contenteditable="true" data-placeholder="Công việc của bạn..."></div>
+                            <div class="column4" contenteditable="true" data-placeholder="Chú thích..."></div>
+                            <div class="column5">
+                                <button class="btn-confirm1">Confirm</button>
+                            </div>
+                        </div>
+                        <div class="row1 board-1 border-bottom">
+                            <div class="column1"></div>
+                            <div class="column2">
+                                    <input class="time-work1" type="time">
+                                    <i class="far fa-check-circle"></i>
+                            </div>
+                            <div class="column3" contenteditable="true" data-placeholder="Công việc của bạn..."></div>
+                             <div class="column4" contenteditable="true" data-placeholder="Chú thích..."></div>
+                            <div class="column5">
+                                <button class="btn-confirm1">Confirm</button>
+                            </div>
+                        </div>
+                            <div class="row1 board-1 border-bottom">
+                            <div class="column1"></div>
+                            <div class="column2">
+                                    <input class="time-work1" type="time">
+                                    <i class="far fa-check-circle"></i>
+                            </div>
+                            <div class="column3" contenteditable="true" data-placeholder="Công việc của bạn..."></div>
+                             <div class="column4" contenteditable="true" data-placeholder="Chú thích..."></div>
+                            <div class="column5">
+                                <button class="btn-confirm1">Confirm</button>
+                            </div>
+                        </div>
+                            <div class="row1 board-1 border-bottom">
+                            <div class="column1"></div>
+                            <div class="column2">
+                                    <input class="time-work1" type="time">
+                                    <i class="far fa-check-circle"></i>
+                            </div>
+                            <div class="column3" contenteditable="true" data-placeholder="Công việc của bạn..."></div>
+                             <div class="column4" contenteditable="true" data-placeholder="Chú thích..."></div>
+                            <div class="column5">
+                                <button class="btn-confirm1">Confirm</button>
+                            </div>
+                        </div>
+                        <div class="row1 board-1 border-bottom">
+                            <div class="column1"></div>
+                            <div class="column2">
+                                    <input class="time-work1" type="time">
+                                    <i class="far fa-check-circle"></i>
+                            </div>
+                            <div class="column3" contenteditable="true" data-placeholder="Công việc của bạn..."></div>
+                             <div class="column4" contenteditable="true" data-placeholder="Chú thích..."></div>
+                            <div class="column5">
+                                <button class="btn-confirm1">Confirm</button>
+                            </div>
+                        </div>
+                        <div class="row1 board-1 border-bottom">
+                            <div class="column1"></div>
+                            <div class="column2">
+                                    <input class="time-work1" type="time">
+                                    <i class="far fa-check-circle"></i>
+                            </div>
+                            <div class="column3" contenteditable="true" data-placeholder="Công việc của bạn..."></div>
+                             <div class="column4" contenteditable="true" data-placeholder="Chú thích..."></div>
+                            <div class="column5">
+                                <button class="btn-confirm1">Confirm</button>
+                            </div>
+                        </div>
+                        <div class="row1 board-1 border-bottom">
+                            <div class="column1"></div>
+                            <div class="column2">
+                                    <input class="time-work1" type="time">
+                                    <i class="far fa-check-circle"></i>
+                            </div>
+                            <div class="column3" contenteditable="true" data-placeholder="Công việc của bạn..."></div>
+                             <div class="column4" contenteditable="true" data-placeholder="Chú thích..."></div>
+                            <div class="column5">
+                                <button class="btn-confirm1">Confirm</button>
+                            </div>
+                        </div>
+                        <div class="row1 board-1 border-bottom">
+                            <div class="column1"></div>
+                            <div class="column2">
+                                    <input class="time-work1" type="time">
+                                    <i class="far fa-check-circle"></i>
+                            </div>
+                            <div class="column3" contenteditable="true" data-placeholder="Công việc của bạn..."></div>
+                             <div class="column4" contenteditable="true" data-placeholder="Chú thích..."></div>
+                            <div class="column5">
+                                <button class="btn-confirm1">Confirm</button>
+                            </div>
+                        </div>
+                        <div class="row1 board-1 border-bottom">
+                            <div class="column1"></div>
+                            <div class="column2">
+                                    <input class="time-work1" type="time">
+                                    <i class="far fa-check-circle"></i>
+                            </div>
+                            <div class="column3" contenteditable="true" data-placeholder="Công việc của bạn..."></div>
+                             <div class="column4" contenteditable="true" data-placeholder="Chú thích..."></div>
+                            <div class="column5">
+                                <button class="btn-confirm1">Confirm</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="board--parent2" class="board-body">
+                        <div class="row1 board-2 border-bottom">
+                            <div class="column1"></div>
+                            <div class="column2">
+                                <input class="time-work2" type="time">
+                                <i class="far fa-check-circle"></i>
+                            </div>
+                            <div class="column3" contenteditable="true" data-placeholder="Công việc của bạn..."></div>
+                            <div class="column4" contenteditable="true" data-placeholder="Chú thích"></div>
+                            <div class="column5">
+                                <button class="btn-confirm2">Confirm</button>
+                            </div>
+                        </div>
+                        <div class="row1 board-2 border-bottom">
+                            <div class="column1"></div>
+                            <div class="column2">
+                                    <input class="time-work2" type="time">
+                                    <i class="far fa-check-circle"></i>
+                            </div>
+                            <div class="column3" contenteditable="true" data-placeholder="Công việc của bạn..."></div>
+                            <div class="column4" contenteditable="true" data-placeholder="Chú thích..."></div>
+                            <div class="column5">
+                                <button class="btn-confirm2">Confirm</button>
+                            </div>
+                        </div>
+                        <div class="row1 board-2 border-bottom">
+                            <div class="column1"></div>
+                            <div class="column2">
+                                    <input class="time-work2" type="time">
+                                    <i class="far fa-check-circle"></i>
+                            </div>
+                            <div class="column3" contenteditable="true" data-placeholder="Công việc của bạn..."></div>
+                             <div class="column4" contenteditable="true" data-placeholder="Chú thích..."></div>
+                            <div class="column5">
+                                <button class="btn-confirm2">Confirm</button>
+                            </div>
+                        </div>
+                            <div class="row1 board-2 border-bottom">
+                            <div class="column1"></div>
+                            <div class="column2">
+                                    <input class="time-work2" type="time">
+                                    <i class="far fa-check-circle"></i>
+                            </div>
+                            <div class="column3" contenteditable="true" data-placeholder="Công việc của bạn..."></div>
+                             <div class="column4" contenteditable="true" data-placeholder="Chú thích..."></div>
+                            <div class="column5">
+                                <button class="btn-confirm2">Confirm</button>
+                            </div>
+                        </div>
+                            <div class="row1 board-2 border-bottom">
+                            <div class="column1"></div>
+                            <div class="column2">
+                                    <input class="time-work2" type="time">
+                                    <i class="far fa-check-circle"></i>
+                            </div>
+                            <div class="column3" contenteditable="true" data-placeholder="Công việc của bạn..."></div>
+                             <div class="column4" contenteditable="true" data-placeholder="Chú thích..."></div>
+                            <div class="column5">
+                                <button class="btn-confirm2">Confirm</button>
+                            </div>
+                        </div>
+                        <div class="row1 board-2 border-bottom">
+                            <div class="column1"></div>
+                            <div class="column2">
+                                    <input class="time-work2" type="time">
+                                    <i class="far fa-check-circle"></i>
+                            </div>
+                            <div class="column3" contenteditable="true" data-placeholder="Công việc của bạn..."></div>
+                             <div class="column4" contenteditable="true" data-placeholder="Chú thích..."></div>
+                            <div class="column5">
+                                <button class="btn-confirm2">Confirm</button>
+                            </div>
+                        </div>
+                        <div class="row1 board-2 border-bottom">
+                            <div class="column1"></div>
+                            <div class="column2">
+                                    <input class="time-work2" type="time">
+                                    <i class="far fa-check-circle"></i>
+                            </div>
+                            <div class="column3" contenteditable="true" data-placeholder="Công việc của bạn..."></div>
+                             <div class="column4" contenteditable="true" data-placeholder="Chú thích..."></div>
+                            <div class="column5">
+                                <button class="btn-confirm2">Confirm</button>
+                            </div>
+                        </div>
+                        <div class="row1 board-2 border-bottom">
+                            <div class="column1"></div>
+                            <div class="column2">
+                                <input class="time-work2" type="time">
+                                <i class="far fa-check-circle"></i>
+                            </div>
+                            <div class="column3" contenteditable="true" data-placeholder="Công việc của bạn..."></div>
+                            <div class="column4" contenteditable="true" data-placeholder="Chú thích"></div>
+                            <div class="column5">
+                                <button class="btn-confirm2">Confirm</button>
+                            </div>
+                        </div>
+                        <div class="row1 board-2 border-bottom">
+                            <div class="column1"></div>
+                            <div class="column2">
+                                <input class="time-work2" type="time">
+                                <i class="far fa-check-circle"></i>
+                            </div>
+                            <div class="column3" contenteditable="true" data-placeholder="Công việc của bạn..."></div>
+                            <div class="column4" contenteditable="true" data-placeholder="Chú thích"></div>
+                            <div class="column5">
+                                <button class="btn-confirm2">Confirm</button>
+                            </div>
+                        </div>
+                        <div class="row1 board-2 border-bottom">
+                            <div class="column1"></div>
+                            <div class="column2">
+                                <input class="time-work2" type="time">
+                                <i class="far fa-check-circle"></i>
+                            </div>
+                            <div class="column3" contenteditable="true" data-placeholder="Công việc của bạn..."></div>
+                            <div class="column4" contenteditable="true" data-placeholder="Chú thích"></div>
+                            <div class="column5">
+                                <button class="btn-confirm2">Confirm</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="board--parent3" class="board-body">
+                        <div class="row1 board-3 border-bottom">
+                            <div class="column1"></div>
+                            <div class="column2">
+                                <input class="time-work3" type="time">
+                                <i class="far fa-check-circle"></i>
+                            </div>
+                            <div class="column3" contenteditable="true" data-placeholder="Công việc của bạn..."></div>
+                            <div class="column4" contenteditable="true" data-placeholder="Chú thích"></div>
+                            <div class="column5">
+                                <button class="btn-confirm3">Confirm</button>
+                            </div>
+                        </div>
+                        <div class="row1 board-3 border-bottom">
+                            <div class="column1"></div>
+                            <div class="column2">
+                                    <input class="time-work3" type="time">
+                                    <i class="far fa-check-circle"></i>
+                            </div>
+                            <div class="column3" contenteditable="true" data-placeholder="Công việc của bạn..."></div>
+                            <div class="column4" contenteditable="true" data-placeholder="Chú thích..."></div>
+                            <div class="column5">
+                                <button class="btn-confirm3">Confirm</button>
+                            </div>
+                        </div>
+                        <div class="row1 board-3 border-bottom">
+                            <div class="column1"></div>
+                            <div class="column2">
+                                    <input class="time-work3" type="time">
+                                    <i class="far fa-check-circle"></i>
+                            </div>
+                            <div class="column3" contenteditable="true" data-placeholder="Công việc của bạn..."></div>
+                             <div class="column4" contenteditable="true" data-placeholder="Chú thích..."></div>
+                            <div class="column5">
+                                <button class="btn-confirm3">Confirm</button>
+                            </div>
+                        </div>
+                            <div class="row1 board-3 border-bottom">
+                            <div class="column1"></div>
+                            <div class="column2">
+                                    <input class="time-work3" type="time">
+                                    <i class="far fa-check-circle"></i>
+                            </div>
+                            <div class="column3" contenteditable="true" data-placeholder="Công việc của bạn..."></div>
+                             <div class="column4" contenteditable="true" data-placeholder="Chú thích..."></div>
+                            <div class="column5">
+                                <button class="btn-confirm3">Confirm</button>
+                            </div>
+                        </div>
+                            <div class="row1 board-3 border-bottom">
+                            <div class="column1"></div>
+                            <div class="column2">
+                                    <input class="time-work3" type="time">
+                                    <i class="far fa-check-circle"></i>
+                            </div>
+                            <div class="column3" contenteditable="true" data-placeholder="Công việc của bạn..."></div>
+                             <div class="column4" contenteditable="true" data-placeholder="Chú thích..."></div>
+                            <div class="column5">
+                                <button class="btn-confirm3">Confirm</button>
+                            </div>
+                        </div>
+                        <div class="row1 board-3 border-bottom">
+                            <div class="column1"></div>
+                            <div class="column2">
+                                    <input class="time-work3" type="time">
+                                    <i class="far fa-check-circle"></i>
+                            </div>
+                            <div class="column3" contenteditable="true" data-placeholder="Công việc của bạn..."></div>
+                             <div class="column4" contenteditable="true" data-placeholder="Chú thích..."></div>
+                            <div class="column5">
+                                <button class="btn-confirm3">Confirm</button>
+                            </div>
+                        </div>
+                        <div class="row1 board-3 border-bottom">
+                            <div class="column1"></div>
+                            <div class="column2">
+                                    <input class="time-work3" type="time">
+                                    <i class="far fa-check-circle"></i>
+                            </div>
+                            <div class="column3" contenteditable="true" data-placeholder="Công việc của bạn..."></div>
+                             <div class="column4" contenteditable="true" data-placeholder="Chú thích..."></div>
+                            <div class="column5">
+                                <button class="btn-confirm3">Confirm</button>
+                            </div>
+                        </div>
+                        <div class="row1 board-3 border-bottom">
+                            <div class="column1"></div>
+                            <div class="column2">
+                                <input class="time-work3" type="time">
+                                <i class="far fa-check-circle"></i>
+                            </div>
+                            <div class="column3" contenteditable="true" data-placeholder="Công việc của bạn..."></div>
+                            <div class="column4" contenteditable="true" data-placeholder="Chú thích"></div>
+                            <div class="column5">
+                                <button class="btn-confirm3">Confirm</button>
+                            </div>
+                        </div>
+                        <div class="row1 board-3 border-bottom">
+                            <div class="column1"></div>
+                            <div class="column2">
+                                <input class="time-work3" type="time">
+                                <i class="far fa-check-circle"></i>
+                            </div>
+                            <div class="column3" contenteditable="true" data-placeholder="Công việc của bạn..."></div>
+                            <div class="column4" contenteditable="true" data-placeholder="Chú thích"></div>
+                            <div class="column5">
+                                <button class="btn-confirm3">Confirm</button>
+                            </div>
+                        </div>
+                        <div class="row1 board-3 border-bottom">
+                            <div class="column1"></div>
+                            <div class="column2">
+                                <input class="time-work3" type="time">
+                                <i class="far fa-check-circle"></i>
+                            </div>
+                            <div class="column3" contenteditable="true" data-placeholder="Công việc của bạn..."></div>
+                            <div class="column4" contenteditable="true" data-placeholder="Chú thích"></div>
+                            <div class="column5">
+                                <button class="btn-confirm3">Confirm</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="board--parent4" class="board-body">
+                        <div class="row1 board-4 border-bottom">
+                            <div class="column1"></div>
+                            <div class="column2">
+                                <input class="time-work4" type="time">
+                                <i class="far fa-check-circle"></i>
+                            </div>
+                            <div class="column3" contenteditable="true" data-placeholder="Công việc của bạn..."></div>
+                            <div class="column4" contenteditable="true" data-placeholder="Chú thích"></div>
+                            <div class="column5">
+                                <button class="btn-confirm4">Confirm</button>
+                            </div>
+                        </div>
+                        <div class="row1 board-4 border-bottom">
+                            <div class="column1"></div>
+                            <div class="column2">
+                                    <input class="time-work4" type="time">
+                                    <i class="far fa-check-circle"></i>
+                            </div>
+                            <div class="column3" contenteditable="true" data-placeholder="Công việc của bạn..."></div>
+                            <div class="column4" contenteditable="true" data-placeholder="Chú thích..."></div>
+                            <div class="column5">
+                                <button class="btn-confirm4">Confirm</button>
+                            </div>
+                        </div>
+                        <div class="row1 board-4 border-bottom">
+                            <div class="column1"></div>
+                            <div class="column2">
+                                    <input class="time-work4" type="time">
+                                    <i class="far fa-check-circle"></i>
+                            </div>
+                            <div class="column3" contenteditable="true" data-placeholder="Công việc của bạn..."></div>
+                             <div class="column4" contenteditable="true" data-placeholder="Chú thích..."></div>
+                            <div class="column5">
+                                <button class="btn-confirm4">Confirm</button>
+                            </div>
+                        </div>
+                            <div class="row1 board-4 border-bottom">
+                            <div class="column1"></div>
+                            <div class="column2">
+                                    <input class="time-work4" type="time">
+                                    <i class="far fa-check-circle"></i>
+                            </div>
+                            <div class="column3" contenteditable="true" data-placeholder="Công việc của bạn..."></div>
+                             <div class="column4" contenteditable="true" data-placeholder="Chú thích..."></div>
+                            <div class="column5">
+                                <button class="btn-confirm4">Confirm</button>
+                            </div>
+                        </div>
+                            <div class="row1 board-4 border-bottom">
+                            <div class="column1"></div>
+                            <div class="column2">
+                                    <input class="time-work4" type="time">
+                                    <i class="far fa-check-circle"></i>
+                            </div>
+                            <div class="column3" contenteditable="true" data-placeholder="Công việc của bạn..."></div>
+                             <div class="column4" contenteditable="true" data-placeholder="Chú thích..."></div>
+                            <div class="column5">
+                                <button class="btn-confirm4">Confirm</button>
+                            </div>
+                        </div>
+                        <div class="row1 board-4 border-bottom">
+                            <div class="column1"></div>
+                            <div class="column2">
+                                    <input class="time-work4" type="time">
+                                    <i class="far fa-check-circle"></i>
+                            </div>
+                            <div class="column3" contenteditable="true" data-placeholder="Công việc của bạn..."></div>
+                             <div class="column4" contenteditable="true" data-placeholder="Chú thích..."></div>
+                            <div class="column5">
+                                <button class="btn-confirm4">Confirm</button>
+                            </div>
+                        </div>
+                        <div class="row1 board-4 border-bottom">
+                            <div class="column1"></div>
+                            <div class="column2">
+                                    <input class="time-work4" type="time">
+                                    <i class="far fa-check-circle"></i>
+                            </div>
+                            <div class="column3" contenteditable="true" data-placeholder="Công việc của bạn..."></div>
+                             <div class="column4" contenteditable="true" data-placeholder="Chú thích..."></div>
+                            <div class="column5">
+                                <button class="btn-confirm4">Confirm</button>
+                            </div>
+                        </div>
+                        <div class="row1 board-4 border-bottom">
+                            <div class="column1"></div>
+                            <div class="column2">
+                                <input class="time-work4" type="time">
+                                <i class="far fa-check-circle"></i>
+                            </div>
+                            <div class="column3" contenteditable="true" data-placeholder="Công việc của bạn..."></div>
+                            <div class="column4" contenteditable="true" data-placeholder="Chú thích"></div>
+                            <div class="column5">
+                                <button class="btn-confirm4">Confirm</button>
+                            </div>
+                        </div>
+                        <div class="row1 board-4 border-bottom">
+                            <div class="column1"></div>
+                            <div class="column2">
+                                <input class="time-work4" type="time">
+                                <i class="far fa-check-circle"></i>
+                            </div>
+                            <div class="column3" contenteditable="true" data-placeholder="Công việc của bạn..."></div>
+                            <div class="column4" contenteditable="true" data-placeholder="Chú thích"></div>
+                            <div class="column5">
+                                <button class="btn-confirm4">Confirm</button>
+                            </div>
+                        </div>
+                        <div class="row1 board-4 border-bottom">
+                            <div class="column1"></div>
+                            <div class="column2">
+                                <input class="time-work4" type="time">
+                                <i class="far fa-check-circle"></i>
+                            </div>
+                            <div class="column3" contenteditable="true" data-placeholder="Công việc của bạn..."></div>
+                            <div class="column4" contenteditable="true" data-placeholder="Chú thích"></div>
+                            <div class="column5">
+                                <button class="btn-confirm4">Confirm</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="board--parent5" class="board-body">
+                        <div class="row1 board-5 border-bottom">
+                            <div class="column1"></div>
+                            <div class="column2">
+                                <input class="time-work5" type="time">
+                                <i class="far fa-check-circle"></i>
+                            </div>
+                            <div class="column3" contenteditable="true" data-placeholder="Công việc của bạn..."></div>
+                            <div class="column4" contenteditable="true" data-placeholder="Chú thích"></div>
+                            <div class="column5">
+                                <button class="btn-confirm5">Confirm</button>
+                            </div>
+                        </div>
+                        <div class="row1 board-5 border-bottom">
+                            <div class="column1"></div>
+                            <div class="column2">
+                                    <input class="time-work5" type="time">
+                                    <i class="far fa-check-circle"></i>
+                            </div>
+                            <div class="column3" contenteditable="true" data-placeholder="Công việc của bạn..."></div>
+                            <div class="column4" contenteditable="true" data-placeholder="Chú thích..."></div>
+                            <div class="column5">
+                                <button class="btn-confirm5">Confirm</button>
+                            </div>
+                        </div>
+                        <div class="row1 board-5 border-bottom">
+                            <div class="column1"></div>
+                            <div class="column2">
+                                    <input class="time-work5" type="time">
+                                    <i class="far fa-check-circle"></i>
+                            </div>
+                            <div class="column3" contenteditable="true" data-placeholder="Công việc của bạn..."></div>
+                             <div class="column4" contenteditable="true" data-placeholder="Chú thích..."></div>
+                            <div class="column5">
+                                <button class="btn-confirm5">Confirm</button>
+                            </div>
+                        </div>
+                            <div class="row1 board-5 border-bottom">
+                            <div class="column1"></div>
+                            <div class="column2">
+                                    <input class="time-work5" type="time">
+                                    <i class="far fa-check-circle"></i>
+                            </div>
+                            <div class="column3" contenteditable="true" data-placeholder="Công việc của bạn..."></div>
+                             <div class="column4" contenteditable="true" data-placeholder="Chú thích..."></div>
+                            <div class="column5">
+                                <button class="btn-confirm5">Confirm</button>
+                            </div>
+                        </div>
+                            <div class="row1 board-5 border-bottom">
+                            <div class="column1"></div>
+                            <div class="column2">
+                                    <input class="time-work5" type="time">
+                                    <i class="far fa-check-circle"></i>
+                            </div>
+                            <div class="column3" contenteditable="true" data-placeholder="Công việc của bạn..."></div>
+                             <div class="column4" contenteditable="true" data-placeholder="Chú thích..."></div>
+                            <div class="column5">
+                                <button class="btn-confirm5">Confirm</button>
+                            </div>
+                        </div>
+                        <div class="row1 board-5 border-bottom">
+                            <div class="column1"></div>
+                            <div class="column2">
+                                    <input class="time-work5" type="time">
+                                    <i class="far fa-check-circle"></i>
+                            </div>
+                            <div class="column3" contenteditable="true" data-placeholder="Công việc của bạn..."></div>
+                             <div class="column4" contenteditable="true" data-placeholder="Chú thích..."></div>
+                            <div class="column5">
+                                <button class="btn-confirm5">Confirm</button>
+                            </div>
+                        </div>
+                        <div class="row1 board-5 border-bottom">
+                            <div class="column1"></div>
+                            <div class="column2">
+                                    <input class="time-work5" type="time">
+                                    <i class="far fa-check-circle"></i>
+                            </div>
+                            <div class="column3" contenteditable="true" data-placeholder="Công việc của bạn..."></div>
+                             <div class="column4" contenteditable="true" data-placeholder="Chú thích..."></div>
+                            <div class="column5">
+                                <button class="btn-confirm5">Confirm</button>
+                            </div>
+                        </div>
+                        <div class="row1 board-5 border-bottom">
+                            <div class="column1"></div>
+                            <div class="column2">
+                                <input class="time-work5" type="time">
+                                <i class="far fa-check-circle"></i>
+                            </div>
+                            <div class="column3" contenteditable="true" data-placeholder="Công việc của bạn..."></div>
+                            <div class="column4" contenteditable="true" data-placeholder="Chú thích"></div>
+                            <div class="column5">
+                                <button class="btn-confirm5">Confirm</button>
+                            </div>
+                        </div>
+                        <div class="row1 board-5 border-bottom">
+                            <div class="column1"></div>
+                            <div class="column2">
+                                <input class="time-work5" type="time">
+                                <i class="far fa-check-circle"></i>
+                            </div>
+                            <div class="column3" contenteditable="true" data-placeholder="Công việc của bạn..."></div>
+                            <div class="column4" contenteditable="true" data-placeholder="Chú thích"></div>
+                            <div class="column5">
+                                <button class="btn-confirm5">Confirm</button>
+                            </div>
+                        </div>
+                        <div class="row1 board-5 border-bottom">
+                            <div class="column1"></div>
+                            <div class="column2">
+                                <input class="time-work5" type="time">
+                                <i class="far fa-check-circle"></i>
+                            </div>
+                            <div class="column3" contenteditable="true" data-placeholder="Công việc của bạn..."></div>
+                            <div class="column4" contenteditable="true" data-placeholder="Chú thích"></div>
+                            <div class="column5">
+                                <button class="btn-confirm5">Confirm</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="board--parent6" class="board-body">
+                        <div class="row1 board-6 border-bottom">
+                            <div class="column1"></div>
+                            <div class="column2">
+                                <input class="time-work6" type="time">
+                                <i class="far fa-check-circle"></i>
+                            </div>
+                            <div class="column3" contenteditable="true" data-placeholder="Công việc của bạn..."></div>
+                            <div class="column4" contenteditable="true" data-placeholder="Chú thích"></div>
+                            <div class="column5">
+                                <button class="btn-confirm6">Confirm</button>
+                            </div>
+                        </div>
+                        <div class="row1 board-6 border-bottom">
+                            <div class="column1"></div>
+                            <div class="column2">
+                                    <input class="time-work6" type="time">
+                                    <i class="far fa-check-circle"></i>
+                            </div>
+                            <div class="column3" contenteditable="true" data-placeholder="Công việc của bạn..."></div>
+                            <div class="column4" contenteditable="true" data-placeholder="Chú thích..."></div>
+                            <div class="column5">
+                                <button class="btn-confirm6">Confirm</button>
+                            </div>
+                        </div>
+                        <div class="row1 board-6 border-bottom">
+                            <div class="column1"></div>
+                            <div class="column2">
+                                    <input class="time-work6" type="time">
+                                    <i class="far fa-check-circle"></i>
+                            </div>
+                            <div class="column3" contenteditable="true" data-placeholder="Công việc của bạn..."></div>
+                             <div class="column4" contenteditable="true" data-placeholder="Chú thích..."></div>
+                            <div class="column5">
+                                <button class="btn-confirm6">Confirm</button>
+                            </div>
+                        </div>
+                            <div class="row1 board-6 border-bottom">
+                            <div class="column1"></div>
+                            <div class="column2">
+                                    <input class="time-work6" type="time">
+                                    <i class="far fa-check-circle"></i>
+                            </div>
+                            <div class="column3" contenteditable="true" data-placeholder="Công việc của bạn..."></div>
+                             <div class="column4" contenteditable="true" data-placeholder="Chú thích..."></div>
+                            <div class="column5">
+                                <button class="btn-confirm6">Confirm</button>
+                            </div>
+                        </div>
+                            <div class="row1 board-6 border-bottom">
+                            <div class="column1"></div>
+                            <div class="column2">
+                                    <input class="time-work6" type="time">
+                                    <i class="far fa-check-circle"></i>
+                            </div>
+                            <div class="column3" contenteditable="true" data-placeholder="Công việc của bạn..."></div>
+                             <div class="column4" contenteditable="true" data-placeholder="Chú thích..."></div>
+                            <div class="column5">
+                                <button class="btn-confirm6">Confirm</button>
+                            </div>
+                        </div>
+                        <div class="row1 board-6 border-bottom">
+                            <div class="column1"></div>
+                            <div class="column2">
+                                    <input class="time-work6" type="time">
+                                    <i class="far fa-check-circle"></i>
+                            </div>
+                            <div class="column3" contenteditable="true" data-placeholder="Công việc của bạn..."></div>
+                             <div class="column4" contenteditable="true" data-placeholder="Chú thích..."></div>
+                            <div class="column5">
+                                <button class="btn-confirm6">Confirm</button>
+                            </div>
+                        </div>
+                        <div class="row1 board-6 border-bottom">
+                            <div class="column1"></div>
+                            <div class="column2">
+                                    <input class="time-work6" type="time">
+                                    <i class="far fa-check-circle"></i>
+                            </div>
+                            <div class="column3" contenteditable="true" data-placeholder="Công việc của bạn..."></div>
+                             <div class="column4" contenteditable="true" data-placeholder="Chú thích..."></div>
+                            <div class="column5">
+                                <button class="btn-confirm6">Confirm</button>
+                            </div>
+                        </div>
+                        <div class="row1 board-6 border-bottom">
+                            <div class="column1"></div>
+                            <div class="column2">
+                                <input class="time-work6" type="time">
+                                <i class="far fa-check-circle"></i>
+                            </div>
+                            <div class="column3" contenteditable="true" data-placeholder="Công việc của bạn..."></div>
+                            <div class="column4" contenteditable="true" data-placeholder="Chú thích"></div>
+                            <div class="column5">
+                                <button class="btn-confirm6">Confirm</button>
+                            </div>
+                        </div>
+                        <div class="row1 board-6 border-bottom">
+                            <div class="column1"></div>
+                            <div class="column2">
+                                <input class="time-work6" type="time">
+                                <i class="far fa-check-circle"></i>
+                            </div>
+                            <div class="column3" contenteditable="true" data-placeholder="Công việc của bạn..."></div>
+                            <div class="column4" contenteditable="true" data-placeholder="Chú thích"></div>
+                            <div class="column5">
+                                <button class="btn-confirm6">Confirm</button>
+                            </div>
+                        </div>
+                        <div class="row1 board-6 border-bottom">
+                            <div class="column1"></div>
+                            <div class="column2">
+                                <input class="time-work6" type="time">
+                                <i class="far fa-check-circle"></i>
+                            </div>
+                            <div class="column3" contenteditable="true" data-placeholder="Công việc của bạn..."></div>
+                            <div class="column4" contenteditable="true" data-placeholder="Chú thích"></div>
+                            <div class="column5">
+                                <button class="btn-confirm6">Confirm</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="board--parent7" class="board-body">
+                        <div class="row1 board-7 border-bottom">
+                            <div class="column1"></div>
+                            <div class="column2">
+                                <input class="time-work7" type="time">
+                                <i class="far fa-check-circle"></i>
+                            </div>
+                            <div class="column3" contenteditable="true" data-placeholder="Công việc của bạn..."></div>
+                            <div class="column4" contenteditable="true" data-placeholder="Chú thích"></div>
+                            <div class="column5">
+                                <button class="btn-confirm7">Confirm</button>
+                            </div>
+                        </div>
+                        <div class="row1 board-7 border-bottom">
+                            <div class="column1"></div>
+                            <div class="column2">
+                                    <input class="time-work7" type="time">
+                                    <i class="far fa-check-circle"></i>
+                            </div>
+                            <div class="column3" contenteditable="true" data-placeholder="Công việc của bạn..."></div>
+                            <div class="column4" contenteditable="true" data-placeholder="Chú thích..."></div>
+                            <div class="column5">
+                                <button class="btn-confirm7">Confirm</button>
+                            </div>
+                        </div>
+                        <div class="row1 board-7 border-bottom">
+                            <div class="column1"></div>
+                            <div class="column2">
+                                    <input class="time-work7" type="time">
+                                    <i class="far fa-check-circle"></i>
+                            </div>
+                            <div class="column3" contenteditable="true" data-placeholder="Công việc của bạn..."></div>
+                             <div class="column4" contenteditable="true" data-placeholder="Chú thích..."></div>
+                            <div class="column5">
+                                <button class="btn-confirm7">Confirm</button>
+                            </div>
+                        </div>
+                            <div class="row1 board-7 border-bottom">
+                            <div class="column1"></div>
+                            <div class="column2">
+                                    <input class="time-work7" type="time">
+                                    <i class="far fa-check-circle"></i>
+                            </div>
+                            <div class="column3" contenteditable="true" data-placeholder="Công việc của bạn..."></div>
+                             <div class="column4" contenteditable="true" data-placeholder="Chú thích..."></div>
+                            <div class="column5">
+                                <button class="btn-confirm7">Confirm</button>
+                            </div>
+                        </div>
+                            <div class="row1 board-7 border-bottom">
+                            <div class="column1"></div>
+                            <div class="column2">
+                                    <input class="time-work7" type="time">
+                                    <i class="far fa-check-circle"></i>
+                            </div>
+                            <div class="column3" contenteditable="true" data-placeholder="Công việc của bạn..."></div>
+                             <div class="column4" contenteditable="true" data-placeholder="Chú thích..."></div>
+                            <div class="column5">
+                                <button class="btn-confirm7">Confirm</button>
+                            </div>
+                        </div>
+                        <div class="row1 board-7 border-bottom">
+                            <div class="column1"></div>
+                            <div class="column2">
+                                    <input class="time-work7" type="time">
+                                    <i class="far fa-check-circle"></i>
+                            </div>
+                            <div class="column3" contenteditable="true" data-placeholder="Công việc của bạn..."></div>
+                             <div class="column4" contenteditable="true" data-placeholder="Chú thích..."></div>
+                            <div class="column5">
+                                <button class="btn-confirm7">Confirm</button>
+                            </div>
+                        </div>
+                        <div class="row1 board-7 border-bottom">
+                            <div class="column1"></div>
+                            <div class="column2">
+                                    <input class="time-work7" type="time">
+                                    <i class="far fa-check-circle"></i>
+                            </div>
+                            <div class="column3" contenteditable="true" data-placeholder="Công việc của bạn..."></div>
+                             <div class="column4" contenteditable="true" data-placeholder="Chú thích..."></div>
+                            <div class="column5">
+                                <button class="btn-confirm7">Confirm</button>
+                            </div>
+                        </div>
+                        <div class="row1 board-7 border-bottom">
+                            <div class="column1"></div>
+                            <div class="column2">
+                                <input class="time-work7" type="time">
+                                <i class="far fa-check-circle"></i>
+                            </div>
+                            <div class="column3" contenteditable="true" data-placeholder="Công việc của bạn..."></div>
+                            <div class="column4" contenteditable="true" data-placeholder="Chú thích"></div>
+                            <div class="column5">
+                                <button class="btn-confirm7">Confirm</button>
+                            </div>
+                        </div>
+                        <div class="row1 board-7 border-bottom">
+                            <div class="column1"></div>
+                            <div class="column2">
+                                <input class="time-work7" type="time">
+                                <i class="far fa-check-circle"></i>
+                            </div>
+                            <div class="column3" contenteditable="true" data-placeholder="Công việc của bạn..."></div>
+                            <div class="column4" contenteditable="true" data-placeholder="Chú thích"></div>
+                            <div class="column5">
+                                <button class="btn-confirm7">Confirm</button>
+                            </div>
+                        </div>
+                        <div class="row1 board-7 border-bottom">
+                            <div class="column1"></div>
+                            <div class="column2">
+                                <input class="time-work7" type="time">
+                                <i class="far fa-check-circle"></i>
+                            </div>
+                            <div class="column3" contenteditable="true" data-placeholder="Công việc của bạn..."></div>
+                            <div class="column4" contenteditable="true" data-placeholder="Chú thích"></div>
+                            <div class="column5">
+                                <button class="btn-confirm7">Confirm</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="addwork">
+            <div class="addwork-header">
+                <p class="addwork_header-text">Change Content</p>
+            </div>
+            <div class="addwork-body">
+                <div class="addwork-top">
+                    <p class="addwork_top-text" >Thêm nội dung công việc của bạn...</p>
+                </div>
+                <div class="addwork-bottom">
+                    <div>
+                        <textarea class="addwork-bottom-text" name="" id="" placeholder="..."></textarea>
+                    </div>
+                </div>
+                <div class="addwork-fotter">
+                    <button class="addwork-confirm">Confirm</button>
+                </div>
+            </div>
+        </div>
+        <div class="addnote">
+            <div class="addnote-header">
+                <p class="addnote_header-text">Change Note</p>
+            </div>
+            <div class="addnote-body">
+                <div class="addnote-top">
+                    <p class="addnote_top-text" >Thêm vào chú thích của bạn</p>
+                </div>
+                <div class="addnote-bottom">
+                    <div>
+                        <textarea class="addnote-bottom-text" name="" id="" placeholder="..."></textarea>
+                    </div>
+                </div>
+                <div class="addnote-fotter">
+                    <button class="addnote-confirm">Confirm</button>
+                </div>
+            </div>
+        </div>
+    </body>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="./main.js"></script>
+</body>
+</html>
