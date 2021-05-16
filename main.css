@@ -151,12 +151,12 @@
     border-right: 1px solid rgb(17,120,142);
 }
 .work3 {
-    width: 550px;
+    width: 533px;
     text-align: center;
     border-right: 1px solid rgb(17,120,142);
 }
 .work4 {
-    width: 232px;
+    width: 225px;
     text-align: center;
     border-right: 1px solid rgb(17,120,142);
 }
@@ -170,24 +170,31 @@
 
 }
 
-.board-body {
-    display: flex;
-    flex-direction: column;
+.parentOfParent {
     margin-left: 12px;
-    border: 1px solid rgb(17,120,142);
+    border: 0.5px solid rgb(17,120,142);
     padding-bottom: 0;
     height: 560px;
     width: 1064px;
+    height: 560px;
+    overflow: auto;
+}
+ 
+.board-body {
+    display: flex;
+    flex-direction: column;
+    border: 0.5px solid rgb(17,120,142);
+    padding-bottom: 0;
+    width: 1047px;
     counter-reset: first;
     position: relative;
     display: none;
-    overflow: auto;
 }
 .board-body.active {
     display: block;
 }
 
-.row1 {
+.row1,.row2,.row3,.row4,.row5,.row6,.row7 {
     height: 80px;
     display: flex;
 }
